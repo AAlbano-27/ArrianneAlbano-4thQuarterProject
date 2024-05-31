@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Help Page</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="navBar">
+            <nav>  
+                <ul>
+                    <li><a href="homeP.html">Home</a></li>
+                    <li><a href="AboutAstro.html">About</a></li>
+                    <div class="dropdown">
+                        <li><a href="#">Branches of Astrophysics</a></li>
+                        <div class="dropdown-content">
+                            <a href="branches.html">Stellar Astrophysics</a>
+                            <a href="branches.html">Galactic Astrophysics</a>
+                            <a href="branches.html">Extragalactic Astrophysics</a>
+                            <a href="branches.html">Cosmology</a>
+                        </div>
+                    </div>
+                    <div class="dropdown">
+                        <li><a href="tools.html">Tools used to study Astrophysics</a></li>
+                    </div>
+                    <li><a href="help.html">Help</a></li>
+                    <li><a href="Register-final.html">Register</a></li>
+                    <div class="search-container">
+                        <form action="/search" method="GET">
+                            <input type="text" placeholder="Search..." name="search">
+                            <button type="submit"><i class="fa fa-search"></i></button>
+                        </form>
+                    </div>
+                </ul>
+            </nav>
+        </div>
+        <div class="introCard">
+            <h1>Help</h1>
+            <h5>Any Questions?</h5> 
+        </div>
+    </div>
+    <footer>
+        <div class="footer-container">
+            <h2>Contact Information</h2>
+            <button id="showContactBtn">Show Contact Info</button>
+            <div id="contactInfo" class="hidden">
+                <p>Email: aalbano@crc.pshs.edu.ph</p>
+                <p>Phone: 0917-162-2498</p>
+            </div>
+        </div>
+    </footer>
+    <script>
+        document.getElementById('showContactBtn').addEventListener('click', function() {
+            var contactInfo = document.getElementById('contactInfo');
+            if (contactInfo.classList.contains('hidden')) {
+                contactInfo.classList.remove('hidden');
+                this.textContent = 'Hide Contact Info';
+            } else {
+                contactInfo.classList.add('hidden');
+                this.textContent = 'Show Contact Info';
+            }
+        });
+    </script>
+</body>
+</html>

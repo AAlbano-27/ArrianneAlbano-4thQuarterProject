@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Albano, Tabile, Escabarte">
+    <meta name="description" content="Home">
+    <link rel="stylesheet" href="style.css">
+    <title>HOME</title>
+</head>
+<body>
+    <div class="container">
+        <div class="navBar">
+            <nav>  
+                <ul>
+                    <li><a href="homeP.html">Home</a></li>
+                    <li><a href="AboutAstro.html">About</a></li>
+                    <div class="dropdown">
+                        <li><a href="#">Branches of Astrophysics</a></li>
+                        <div class="dropdown-content">
+                            <a href="branches.html">Stellar Astrophysics</a>
+                            <a href="branches.html">Galactic Astrophysics</a>
+                            <a href="branches.html">Extragalactic Astrophysics</a>
+                            <a href="branches.html">Cosmology</a>
+                        </div>
+                    </div>
+                    <div class="dropdown">
+                        <li><a href="tools.html">Tools used to study Astrophysics</a></li>
+                    </div>
+                    <li><a href="help.html">Help</a></li>
+                    <li><a href="Register-final.html">Register</a></li>
+                    <div class="search-container">
+                        <form action="/search" method="GET">
+                            <input type="text" placeholder="Search..." name="search">
+                            <button type="submit"><i class="fa fa-search"></i></button>
+                        </form>
+                    </div>
+                </ul>
+            </nav>
+        </div>   
+        <div class="introCard">
+            <h1>Astrophysics</h1>
+            <h5>The Different Branches of Astrophysics</h5> 
+        </div>
+    </div>
+
+    <h5 class="section-title">What are the branches of Astrophysics?</h5>
+    <div class="textCard">
+        <div class="row">
+            <div class="col">
+                <img src="https://scx1.b-cdn.net/csz/news/800a/2023/astronomers-discover-e.jpg" alt="Stellar Astrophysics">
+                <h5 class="header">Stellar Astrophysics</h5>
+                <p>Stellar astrophysics focuses on the study of stars, including their formation, evolution, and death. This field helps us understand phenomena such as supernovae, neutron stars, and black holes. It also investigates stellar atmospheres, stellar interiors, and the life cycles of different types of stars.</p>
+            </div>
+            <div class="col">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/12/Artist%27s_impression_of_the_Milky_Way_%28updated_-_annotated%29.jpg/1200px-Artist%27s_impression_of_the_Milky_Way_%28updated_-_annotated%29.jpg" alt="Galactic Astrophysics">
+                <h5 class="header">Galactic Astrophysics</h5>
+                <p>Galactic astrophysics examines the structure and components of galaxies, including stars, gas, and dark matter. It also explores the processes that drive the formation and evolution of galaxies. This field studies the dynamics of galaxies, their distribution in space, and the interactions between galaxies within clusters.</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <img src="https://www.cfa.harvard.edu/sites/default/files/styles/max_650x650/public/2019-04/ExtragalacticAstronomy_5.jpg?itok=1N8eK6PQ" alt="Extragalactic Astrophysics">
+                <h5 class="header">Extragalactic Astrophysics</h5>
+                <p>Extragalactic astrophysics extends beyond our own galaxy to study other galaxies, clusters, and the large-scale structure of the universe. It includes the investigation of phenomena such as quasars, active galactic nuclei, and intergalactic matter. This field seeks to understand the formation and evolution of cosmic structures on the largest scales.</p>
+            </div>
+            <div class="col">
+                <img src="https://www.thoughtco.com/thmb/YH3-VO3ynrVSDElYKdkbDm4gh8M=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/060915_CMB_Timeline150-56a72b9c5f9b58b7d0e78855.jpg" alt="Cosmology">
+                <h5 class="header">Cosmology</h5>
+                <p>Cosmology is the study of the universe as a whole, including its origin, evolution, and ultimate fate. This field encompasses the Big Bang theory, cosmic microwave background radiation, and dark energy. Cosmologists investigate the fundamental properties of space and time, the nature of the universe's contents, and the processes that have shaped its history.</p>
+            </div>
+        </div>        
+    </div>
+</body>
+<style>
+    body {
+        background-color: #222;
+        color: #fff;
+    }
+
+    .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 20px;
+    }
+
+    .navBar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-bottom: 20px;
+        border-bottom: 1px solid #fff;
+    }
+
+    .navBar ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    .navBar ul li {
+        display: inline;
+        margin-left: 20px;
+    }
+
+    .navBar ul li a {
+        text-decoration: none;
+        color: #fff;
+        transition: color 0.3s;
+    }
+
+    .navBar ul li a:hover {
+        color: #ccc;
+    }
+
+    .search-container {
+        position: relative;
+    }
+
+    .search-container input[type=text] {
+        padding: 10px;
+        font-size: 16px;
+        border: none;
+        border-radius: 5px;
+        background-color: rgba(255, 255, 255, 0.3);
+        color: #fff;
+        width: 200px;
+        transition: background-color 0.3s;
+    }
+
+    .search-container input[type=text]:focus {
+        background-color: rgba(255, 255, 255, 0.5);
+    }
+
+    .search-container button {
+        padding: 10px 15px;
+        background: transparent;
+        border: none;
+        cursor: pointer;
+        border-radius: 5px;
+        color: #fff;
+        transition: background-color 0.3s;
+    }
+
+    .search-container button:hover {
+        background-color: rgba(255, 255, 255, 0.3);
+    }
+
+    .introCard {
+        text-align: center;
+        padding: 50px 0;
+    }
+
+    .introCard h1 {
+        font-size: 60px;
+        margin-bottom: 20px;
+    }
+
+    .introCard h5 {
+        font-size: 24px;
+        margin-bottom: 40px;
+    }
+
+    .section-title {
+        text-align: center;
+        margin-top: 40px;
+        font-size: 32px;
+    }
+
+    .textCard {
+        display: flex;
+        justify-content: center;
+        margin-top: 40px;
+    }
+
+    .textCard .col {
+        flex: 1;
+        padding: 20px;
+        max-width: 400px;
+        background-color: rgba(255, 255, 255, 0.1);
+        border-radius: 10px;
+        margin: 0 10px;
+        transition: transform 0.3s ease-in-out;
+    }
+
+    .textCard .col:hover {
+        transform: scale(1.05);
+    }
+
+    .textCard img {
+        width: 100%;
+        border-radius: 10px;
+        margin-bottom: 20px;
+    }
+
+    .textCard h5 {
+        font-size: 24px;
+        margin-bottom: 10px;
+    }
+
+    .textCard p {
+        font-size: 18px;
+        line-height: 1.5;
+    }
+
+    .row {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+</style>
+</html>

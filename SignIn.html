@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE-edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+</head>
+<body>
+
+<div class="container">
+    <div class="form-box">
+        <form name="Formfill">
+            <h2>Register</h2>
+            <div class="input-box">
+                <span class="icon"><ion-icon name="person-circle-outline"></ion-icon> </span>
+                <input type="text" name="Username" placeholder="Username" required>
+            </div>
+            <div class="input-box">
+                <span class="icon"><ion-icon name="at-outline"></ion-icon> </span>
+                <input type="email" name="Email" placeholder="Email" required>
+            </div>
+            <div class="input-box">
+                 <span class="icon"><ion-icon name="lock-closed-outline"></ion-icon></span>
+                <input type="password" name="Password" placeholder="Password" required>
+            </div>
+            <div class="input-box">
+                 <span class="icon"><ion-icon name="lock-closed-outline"></ion-icon> </span>
+                <input type="password" name="cPassword" placeholder="Confirm Password" required>
+            </div>
+            <div class="remember-forget">
+                    <label><input type="checkbox">Remember Me</label>
+                    <a href="#">Forget Password</a>
+            </div>
+            <div class="button-box">
+                <button type="button" onclick="register()">Register</button>
+                <button type="reset">Clear</button>
+            </div>
+            <div class="register-link">
+                <p>Already have an account? <a href="login.html">Login</a></p>
+            </div>
+        </form>
+    </div>
+</div>
+    
+<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+<script>
+    function register() {
+        const username = document.forms["Formfill"]["Username"].value;
+        const email = document.forms["Formfill"]["Email"].value;
+        const password = document.forms["Formfill"]["Password"].value;
+        const cPassword = document.forms["Formfill"]["cPassword"].value;
+
+        if (password === cPassword) {
+            const user = {
+                email: email,
+                password: password
+            };
+            localStorage.setItem(username, JSON.stringify(user));
+            alert('Registration successful! You will be redirected to the login page.');
+            window.location.href = 'login.html'; 
+        } else {
+            alert('Passwords do not match.');
+        }
+    }
+</script>
+
+<style>
+    * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+    }
+    
+    .container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        background: url("https://i.pinimg.com/originals/7b/9a/d3/7b9ad33d7908de709960f48aa7b9dc2b.jpg");
+        background-position:center;
+        background-size:cover;
+    }
+
+    .form-box {
+        position: relative;
+        width: 400px;
+        background: rgba(255, 255, 255, .5);
+        border: 2px solid rgba(255, 255, 255, .5);
+        border-radius: 40px;
+        padding: 40px;
+        box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    }
+    
+    h2 {
+        font-size: 2em;
+        color: black;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+    
+    .input-box {
+        position: relative;
+        width: 100%;
+        margin: 20px 0;
+        border-bottom: 2px solid black;
+    }
+    
+    .input-box label {
+        position: absolute;
+        top: 50%;
+        left: 5px;
+        transform: translateY(-50%);
+        font-size: 1em;
+        color: black;
+        pointer-events: none;
+        transition: .5s;
+    }
+    
+    .input-box input:focus~label, .input-box input:valid~label {
+        top: -5px;
+    }
+
+    .input-box input {
+        width: 100%;
+        height: 50px;
+        background: transparent;
+        border: none;
+        outline: none;
+        font-size: 1em;
+        color: black;
+        padding: 0 35px 0 5px;
+    }
+    
+    .input-box .icon {
+        position: absolute;
+        right: 8px;
+        color: black;
+        font-size: 1.2em;
+        line-height: 57px;
+    }
+    
+    .remember-forget {
+        margin: -15px 0 15px;
+        font-size: .9em;
+        color: black;
+        display: flex;
+        justify-content: space-between;
+    }
+    
+    .remember-forget label input {
+        margin-right: 3px;
+    }
+    
+    .remember-forget a {
+        color: black;
+        text-decoration: none;
+    }
+    
+    .remember-forget a:hover {
+        text-decoration: underline;
+    }
+
+    .button-box {
+        display: flex;
+        justify-content: space-between;
+    }
+    
+    button {
+        width: 48%;
+        height: 40px;
+        background: #fff;
+        border: 1px solid black;
+        border-radius: 20px;
+        cursor: pointer;
+        font-size: 1em;
+        color: black;
+        font-weight: 500;
+        transition: 0.3s;
+    }
+    
+    button:hover {
+        background: black;
+        color: white;
+    }
+    
+    .register-link {
+        font-size: .9em;
+        color: black;
+        text-align: center;
+        margin: 25px 0 10px;
+    }
+    
+    .register-link p a {
+        color: black;
+        text-decoration: none;
+        font-weight: 600;
+    }
+    
+    .register-link p a:hover {
+        text-decoration: underline;
+    }
+</style>
+</body>
+</html>
